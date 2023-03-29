@@ -22,4 +22,4 @@ const getNamefetch = (id) => {                                  //traigo el
         console.log(error);
     }
 }
-getNamefetch(30)
+getNamefetch(8)
