@@ -5,6 +5,10 @@ window.addEventListener("load",() =>{
 })
 
 let pagina = 1 // variable para controlar la paginacion
+let stringPagina = `Pagina: ${pagina}`
+
+document.querySelector(".controlPagina").innerHTML = stringPagina;
+
 
 // capturar los botones
 
@@ -20,7 +24,9 @@ btnAnterior.addEventListener("click",()=>{
         //llamar a la funcion que cargue las paginas
         cargarPeliculas();
     }
-})
+    let stringPagina = `Pagina: ${pagina}`
+    document.querySelector(".controlPagina").innerHTML = stringPagina;
+}); 
 
 //funcion siguiente
 
@@ -28,13 +34,16 @@ btnSiguiente.addEventListener("click",()=>{
     if(pagina > 500){
         // pagina = pagina - 1
         pagina = 1; 
+        cargarPeliculas();
     }else
     {
         pagina +=1;
         //llamar a la funcion que cargue las paginas
         cargarPeliculas();
-    }   
-})
+    }
+    let stringPagina = `Pagina: ${pagina}`
+    document.querySelector(".controlPagina").innerHTML = stringPagina;
+});
 
 //funcion que cargue las pelis
 
